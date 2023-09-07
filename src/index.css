@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size:16px
+}
+
+html,body,#root{
+  width: 100%;
+  height: 100%;
+  background-color: hsl(235, 18%, 26%)
+}
+
+.box-shadow:hover{
+  box-shadow: -3px 9px 29px -6px #FF6347 ;
+}
+
+@layer components{
+  .form-container{
+    @apply rounded-3xl
+    p-4 bg-white w-[860px] h-[600px] flex
+  }
+  .mobile-container{
+    @apply flex-col-reverse h-[1000px] w-[380px] rounded-none p-0
+  }
+
+  .mobile-left-side{
+    @apply w-full py-0
+  }
+
+  .bg-hover-color{
+    @apply hover:bg-gradient-to-r from-[#ff5478] to-primary
+    }
+
+  .header{
+    @apply text-[50px] max-[870px]:text-[40px]
+     tracking-wide font-semibold mb-2 mt-2 leading-[50px]
+      max-[870px]:leading-[40px] tracking-normal
+  }
+
+  .mobile-success-design{
+    @apply h-full rounded-none w-[380px] pt-14 pb-2 
+  }
+
+  .mobile-success-button{
+    @apply mt-auto mb-7
+  }
+  .success-form-container{
+    @apply py-0 max-[870px]:mobile-success-design
+    bg-white h-[460px] w-[450px] rounded-3xl
+  }
+}
+
